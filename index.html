@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <!--Import materialize.css-->
+  <link type="text/css" rel="stylesheet" href="css/materialize.css" media="screen,projection" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+
+
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.css" />-->
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.theme.css" />-->
+  <!--  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.structure.css" />-->
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <!--Let browser know website is optimized for mobile-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+
+</head>
+
+<body>
+
+
+
+
+
+  <div>
+    <div>
+      <header>
+        <nav>
+          <div class="nav-wrapper" style="background-color: #ffffff;">
+            <a href="#!" class="brand-logo center"><img id="logo" src="assets/images/logo_trivago.png" alt=""></a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="#">INR</a></li>
+              <li><a href="#" class="dropdown-trigger" data-target="profile-drop">My Profile <div class="arrow"></div></a></li>
+            </ul>
+          </div>
+        </nav>
+
+        <ul class="sidenav" id="mobile-demo">
+          <li><a href="#">INR</a></li>
+          <li><a href="#" class="dropdown-trigger" data-target="side-profile-drop" onclick='sideProfileDropShift()'>My Profile <div class="arrow"></div></a></li>
+        </ul>
+        <ul id="profile-drop" class="dropdown-content">
+          <li><a href="#">Log In</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+        <ul id="side-profile-drop" class="dropdown-content">
+          <li><a href="#">Log In</a></li>
+          <li class="divider" style="margin: 0"></li>
+          <li><a href="#">Sign Up</a></li>
+        </ul>
+      </header>
+
+      <div id="sub-nav" style="background-color: #37454D;">
+        <div class="contain">
+          <div style="margin-bottom: 10px;">
+            <nav>
+              <div class="nav-wrapper">
+                <div class="input-field">
+                  <input id="search" type="search" required>
+                  <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                  <button class="btn waves-effect waves-light" type="submit" name="action">Submit</button>
+                </div>
+              </div>
+            </nav>
+          </div>
+
+          <div class="row">
+
+            <div class="no-pad-left col s4 hotel-check">
+              <img src="assets/images/calendar.png" alt="">
+              <span class="check-name">Check-in</span>
+              <input type="text" class="datepicker date-entry" value="--/--/----" />
+            </div>
+
+            <div class="col s4 no-pad-left hotel-check">
+              <img src="assets/images/calendar.png" alt="">
+              <span class="check-name">Check-out</span>
+              <!--              <span class="no-see">No see</span>-->
+              <input type="text" class="datepicker date-entry" value="--/--/----" />
+            </div>
+
+            <div class="col s4  no-pad-left no-pad-right" style="height: 41px;">
+              <div class="people-count">
+                <div class="selected">
+                  <span class="shown-img"><img src="assets/images/users.png" alt="" />Double Room</span>
+                </div>
+                <input type="hidden" name="count" value="single">
+                <ul class="count-menu">
+                  <li id="single"><img src="assets/images/user.png" alt=""><span>Single Room</span></li>
+                  <li id="double"><img src="assets/images/users.png" alt=""><span>Double Room</span></li>
+                  <li id="family"><img src="assets/images/family.png" alt="" style="height: 22px;"><span>Family Rooms</span></li>
+                  <li id="multiple"><img src="assets/images/group.png" alt="" style="height: 26px;"><span>Multiple Rooms</span></li>
+                </ul>
+              </div>
+              <!--
+            <select name="" id="people-count" style="display: block;">
+              <option value="Option 1"><i class="far fa-user"></i>Single Room</option>
+              <option value="Double Room"><img src="assets/images/users.png" alt="">Double Room</option>
+              <option value="Family Rooms"><img src="assets/images/family.png" alt="">Family Rooms</option>
+              <option value="Multiple Rooms"><img src="assets/images/group.png" alt="">Multiple Rooms</option>
+            </select>
+-->
+              <!--
+              <div class="selectBox">
+                <span class="selected"></span>
+                <div class="selectOptions">
+                  <span class="selectOption" value="Single">Single</span>
+                  <span class="selectOption" value="Couple">Couple</span>
+                  <span class="selectOption" value="Family">Family</span>
+                </div>
+              </div>
+-->
+            </div>
+
+          </div>
+
+          <div></div>
+
+        </div>
+
+      </div>
+    </div>
+    <main>
+
+      <div class="ease-use">
+        <div class="map-access">
+          <div class="map-link"><a href="#">View Map</a></div>
+          <div class="map-link"><a href="#">Map</a></div>
+        </div>
+
+        <div class="recommendation">
+          <span style="line-height: 34px; font-weight: 600; font-size: 14px">Sort By</span>
+          <div class="input-field col s12">
+            <select>
+      <option value="our_recommendation">Our Recommendations</option>
+            <option value="">Rating &amp; Recommended</option>
+            <option value="">Price &amp; Recommended</option>
+            <option value="">Distance &amp; Recommended</option>
+            <option value="">Rating Only</option>
+            <option value="">Price Only</option>
+            <option value="">Distance Only</option>
+            <option value="">Favourites</option>
+    </select>
+          </div>
+          <div style="position: relative;">
+            <img src="assets/images/info.png" alt="">
+            <span class="recommendation-info">
+              The ranking results reflect your search criteria and our assessment of the attractiveness of the offer compared to other offers available on our site. It also reflects the compensation paid by the booking site.
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hotel-lists">
+        <div class="hotel-list row">
+          <div class="hotel col s8 l7">
+            <div class="row">
+              <div class="hotel-img col s4">
+
+                <div class="fav">
+                  <div class="n-fav"><img src="" alt="" /></div>
+                  <div class="y-fav"><img src="" alt="" /></div>
+                </div>
+                <div>
+                  <img src="" alt="" />
+                </div>
+
+                <div>
+                  <span>View Images</span>
+                </div>
+              </div>
+              <div class="hotel-detail col s8">
+
+                <div class="upper-section">
+                  <h5>FabHotel Limestone</h5>
+                  <div class="stars">
+                    <ul>
+                      <li class="star"><img src="" alt="">Hii</li>
+                      <li class="star"><img src="" alt="">hii</li>
+                      <li class="star"><img src="" alt="">Hii</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="location">
+                  <p>
+                    <span class="city">Hyderabad</span><span>,</span>
+                    <span class="distance">14.1</span>
+                    <span>km to</span>
+                    <span class="near-to">City Centre</span>
+                  </p>
+                </div>
+                <div class="short-review">
+                  <p>
+                    <span class="rating">9.3</span>
+                    <span class="quality">Excellent</span>
+                    <span class="no-of-reviews">(<span>982</span>&thinsp;reviews)</span>
+                  </p>
+                </div>
+                <div class="services">
+                  <div class="service">
+                    <img src="" alt="" />
+                    <span>Free WiFi</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <div class="booking-sites col l2 hide-on-med-and-down">
+            <div class="hotel-website">
+              <span class="website-name">Hotel Website</span>
+              <div class="price">
+                <img src="" alt="" class="currency" /><span class="value">1,203</span></div>
+            </div>
+            <div class="high-price-website">
+              <span class="website-name">Booking.com</span>
+              <div class="price">
+                <img src="" alt="" class="currency" /><span class="value">1,155</span>
+              </div>
+            </div>
+            <div class="low-price-website">
+              <span class="website-name">Hotels.com</span>
+              <div class="price">
+                <img src="" alt="" class="currency" /><span class="value">2,038</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="best-price col s4 l3">
+            <div class="deal">
+              <h6>FabHotels</h6>
+              <div class="high-price">
+                <div class="currency"><img src="" alt=""></div>
+                <h5 class="value">22,000</h5>
+              </div>
+              <div class="hotel-price">
+                <div class="currency"><img src="" alt=""></div>
+                <h5 class="value">1,214</h5>
+              </div>
+            </div>
+            <div class="view-deal">
+              <button>View Deal<div class="arrow"></div></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="hotel-list">
+          <div class="hotel"></div>
+          <div class="price"></div>
+        </div>
+        <div class="hotel-list">
+          <div class="hotel"></div>
+          <div class="price"></div>
+        </div>
+        <div class="hotel-list">
+          <div class="hotel"></div>
+          <div class="price"></div>
+        </div>
+        <div class="hotel-list">
+          <div class="hotel"></div>
+          <div class="price"></div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <script src="js/main.js">
+    document.addEventListener('DOMContentLoaded', function() {
+      var options = {};
+      var elems = document.querySelectorAll('.sidenav');
+      var instances = M.Sidenav.init(elems, options);
+    });
+
+    // Or with jQuery
+  </script>
+</body>
+
+</html>
